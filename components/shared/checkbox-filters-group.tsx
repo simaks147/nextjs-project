@@ -23,8 +23,8 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({
   defaultItems,
   limit = 5,
   searchInputPlaceholder = 'Поиск...',
-  onChange,
-  defaultValue,
+  // onChange,
+  // defaultValue,
   className,
 }) => {
   const [showAll, setShowAll] = React.useState(false);

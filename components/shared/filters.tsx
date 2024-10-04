@@ -22,8 +22,9 @@ export const Filters: React.FC<Props> = ({ className }) => {
         <div className='flex gap-3 mb-5'>
           <Input type='number' placeholder='0' min={0} max={1000} defaultValue={0} />
           <Input type='number' placeholder='1000' min={100} max={1000} />
-          <RangeSlider min={0} max={5000} step={10} value={[0, 5000]} />
         </div>
+        <RangeSlider min={0} max={5000} step={10} value={[0, 5000]} />
+      </div>
         <CheckboxFiltersGroup
           title='Ингредиенты'
           className='mt-5'
@@ -104,8 +105,7 @@ export const Filters: React.FC<Props> = ({ className }) => {
               value: '6',
             },
           ]}
-        />
-      </div>
+      />
     </div>
   )
 }
