@@ -25,42 +25,42 @@ export default function Home() {
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 2,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 3,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 4,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 5,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 6,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 7,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
@@ -68,8 +68,8 @@ export default function Home() {
                 },
               ]} />
             <ProductsGroupList
-              title="Завтрак"
-              categoryId={1}
+              title="Комбо"
+              categoryId={2}
               items={[
                 {
                   id: 1,
@@ -79,42 +79,42 @@ export default function Home() {
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 2,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 3,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 4,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 5,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 6,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
                   items: [{ price: 550 }]
                 },
                 {
-                  id: 1,
+                  id: 7,
                   name: "Чизбургер-пицца",
                   price: 550,
                   imageUrl: "/assets/images/pizza.avif",
