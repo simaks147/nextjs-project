@@ -20,8 +20,13 @@ export const SearchInput: React.FC<Props> = ({ className }) => {
 
   useClickAway(ref, () => setFocused(false))
 
-  useDebounce(() => {
-    Api.products.search(searchQuery).then(items => setProducts(items))
+  useDebounce(async () => {
+    try {
+      const res = await Api.products.search(searchQuery)
+      setProducts(res)
+    } catch (error) {
+      console.log(error);
+    }
   }, 500, [searchQuery])
 
   const onClickItem = () => {
