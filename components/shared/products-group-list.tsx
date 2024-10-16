@@ -19,7 +19,7 @@ export const ProductsGroupList: React.FC<Props> = ({ title, items, listClassName
   const setActiveCategoryId = useCategoryStore((state) => state.setActiveId);
   const intersectionRef = React.useRef(null);
   const intersection = useIntersection(intersectionRef, {
-    threshold: 0.4
+    threshold: [0.75]  
   });
 
   React.useEffect(() => {
@@ -35,7 +35,7 @@ export const ProductsGroupList: React.FC<Props> = ({ title, items, listClassName
       <div className={cn('grid grid-cols-3 gap-[50px]', listClassName)}>
         {
           items
-            .map((product, i) => (
+            .map((product) => (
               <ProductCard
                 key={product.id}
                 id={product.id}
