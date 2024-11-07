@@ -16,10 +16,10 @@ interface Props {
   name: string;
   ingredients: Ingredient[];
   items: ProductItem[];
-  onClickAddCart?: VoidFunction;
+  onSubmit: (itemId: number, ingredientId: number[]) => void;
 }
 
-export const ChoosePizzaForm: React.FC<Props> = ({ className, imageUrl, name, ingredients, items, onClickAddCart }) => {
+export const ChoosePizzaForm: React.FC<Props> = ({ className, imageUrl, name, ingredients, items, onSubmit }) => {
   const [size, setSize] = React.useState<PizzaSize>(20)
   const [type, setType] = React.useState<PizzaType>(1)
   const [selectedIngredients, { toggle: addIngredient }] = useSet(new Set<number>([]))
@@ -27,6 +27,8 @@ export const ChoosePizzaForm: React.FC<Props> = ({ className, imageUrl, name, in
   const totalPrice = calcTotalPizzaPrice(type, size, items, ingredients, selectedIngredients)
   const availablePizzaSizes = getAvailablePizzaSizes(type, items)
   const textDetaills = `${size} см, ${mapPizzaType[type]} тесто`
+
+  const currentItemId = items.find(item => item.size === size && item.pizzaType === type)?.id
 
   React.useEffect(() => {
     const isAvailableSize = availablePizzaSizes.find(item => Number(item.value) === size && !item.disabled)
@@ -37,9 +39,11 @@ export const ChoosePizzaForm: React.FC<Props> = ({ className, imageUrl, name, in
     }
   }, [type])
 
-  // const handleClickAdd = () => {
-  //   onClickAddCart?.()
-  // }
+  const handleClickAdd = () => {
+    if (currentItemId) {
+      onSubmit(currentItemId, Array.from(selectedIngredients))
+    }
+  }
 
   return (
     <div className={cn(className, 'flex flex-1')}>
@@ -68,7 +72,7 @@ export const ChoosePizzaForm: React.FC<Props> = ({ className, imageUrl, name, in
             }
           </div>
         </div>
-        <Button className="h-[55px] px-10 text-base rounded-[18px] w-full mt-10" onClick={onClickAddCart}>
+        <Button className="h-[55px] px-10 text-base rounded-[18px] w-full mt-10" onClick={handleClickAdd}>
           Добавить в корзину за {totalPrice} ₽
         </Button>
       </div>
